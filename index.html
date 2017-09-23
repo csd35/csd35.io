@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html >
+<head>
+   
+    <title>Battleship</title>
+    
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            background-color: lightblue;
+        }
+
+        table{
+            width: 100%;
+            height: 40%;
+
+        }
+
+        h1{
+            text-align: center;
+        }
+          
+    </style>
+   
+</head>
+<body>
+    <h1>Opponent's board</h1>
+    <table>
+        <tr><td><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th>
+        <tr><th>1</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>2</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>3</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>4</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>5</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>6</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>7</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>8</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>9</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>10</th><td><td><td><td><td><td><td><td><td><td>
+    </table>
+
+    <h1>Your board</h1>
+
+    <table class="gameboard">
+        <tr><td><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th>
+        <tr><th>1</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>2</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>3</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>4</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>5</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>6</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>7</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>8</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>9</th><td><td><td><td><td><td><td><td><td><td>
+        <tr><th>10</th><td><td><td><td><td><td><td><td><td><td>
+    </table>
+
+    <script type="text/javascript">
+        
+         window.onload = start();
+
+        function start() {
+            if (typeof (Storage) !== "undefined") {
+              //  var response = prompt("What is your name?");
+                //alert(";lkj");
+              
+                //alert("her");
+                var i = window.localStorage.length;
+                alert("lkj");
+                window.localStorage.setItem(i, "smith");
+
+
+                alert("hey");
+            }
+             // response = prompt("Where do you want to place your ships?");
+             //localStorage.setItem("player_one_ships", response);
+
+
+             //  response = prompt("What is your name?");
+             //    localStorage.setItem("player_two", response);
+
+             //       response = prompt("Where do you want to place your ships?");
+             //        localStorage.setItem("player_two_ships", response);
+
+             //         var stringOne = localStorage.key("player_one");
+             //           var stringTwo = localStorage.key("player_two");
+             //            var stringThree = localStorage.key("player_one_ships");
+             //            var stringFour = localStorage.key("player_two_ships");
+
+             //alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
+
+         }
+    </script>
+</body>
+
+   
+</html>
