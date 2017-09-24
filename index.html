@@ -156,7 +156,7 @@
                         break;
                 }
 
-                var end; var beginning; var spaces; var nextSpace; var newLength; var num; var i;
+                var end; var beginning; var spaces =[]; var nextSpace;  var num; var i;
 
                 console.log(aircraft_one[2]);
                 console.log(aircraft_one[5]);
@@ -164,17 +164,21 @@
                     alert("first");
                     end = aircraft_one[6];
                     beginning = aircraft_one[3];
-                    spaces = aircraft_one[0].concat(aircraft_one[2]);
+                    spaces.push(aircraft_one[0].concat(aircraft_one[2]));
                     num = Number(aircraft_one[2]);
 
 
                     for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
-                        newLength = spaces.push(aircraft_one[0].concat(nextSpace.toString));
+                      spaces.push(aircraft_one[0].concat(nextSpace.toString));
                     }
 
                     sessionStorage.setItem("aircraft_one", spaces);
+
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
 
                     alert("hey"); 
 
@@ -186,18 +190,21 @@
 
                     end = aircraft_two[6];
                     beginning = aircraft_two[3];
-                    spaces = aircraft_two[0].concat(aircraft_two[2]);
+                    spaces.push(aircraft_two[0].concat(aircraft_two[2]));
                     num = Number(aircraft_two[2]);
 
 
                     for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
-                        newLength = spaces.push(aircraft_two[0].concat(nextSpace.toString));
+                        spaces.push(aircraft_two[0].concat(nextSpace.toString));
                     }
 
                     sessionStorage.setItem("aircraft_two", spaces);
                     alert("hey");
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
 
 
                 } else {
@@ -208,18 +215,21 @@
 
                     end = sub_one[6];
                     beginning = sub_one[3];
-                    spaces = sub_one[0].concat(sub_one[2]);
+                    spaces.push(sub_one[0].concat(sub_one[2]));
                     num = Number(sub_one[2]);
 
 
-                    for ( i = 0; i < 4; i++) {
+                    for ( i = 0; i < 2; i++) {
                         nextSpace = num + 1;
 
-                        newLength = spaces.push(sub_one[0].concat(nextSpace.toString));
+                     spaces.push(sub_one[0].concat(nextSpace.toString));
                     }
 
                     sessionStorage.setItem("sub_one", spaces);
                     alert("hey");
+                    for (i = 0; i < 3; i++) {
+                        spaces.pop();
+                    }
 
 
                 } else {
@@ -231,11 +241,11 @@
 
                     end = sub_two[6];
                     beginning = sub_two[3];
-                    spaces = sub_two[0].concat(sub_two[2]);
+                    spaces.push(sub_two[0].concat(sub_two[2]));
                     num = Number(sub_two[2]);
 
 
-                    for ( i = 0; i < 4; i++) {
+                    for ( i = 0; i < 2; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(sub_two[0].concat(nextSpace.toString));
@@ -245,20 +255,24 @@
 
                     alert("hey");
 
+                    for (i = 0; i < 3; i++) {
+                        spaces.pop();
+                    }
+
                 } else {
 
                 }
 
-                beginning = battleship_one[3];
+           
 
                 if (battleship_one[2] == battleship_one[5]) {
-
+                    beginning = battleship_one[3];
                     end = battleship_one[6];
-                    spaces = battleship_one[0].concat(battleship_one[2]);
+                    spaces.push(battleship_one[0].concat(battleship_one[2]));
                     num = Number(battleship_one[2]);
 
 
-                    for ( i = 0; i < 4; i++) {
+                    for ( i = 0; i < 3; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(battleship_one[0].concat(nextSpace.toString));
@@ -267,6 +281,9 @@
                     sessionStorage.setItem("battleship_one", spaces);
                     alert("hey");
 
+                    for (i = 0; i < 4; i++) {
+                        spaces.pop();
+                    }
 
                 } else {
 
@@ -276,11 +293,11 @@
 
                     end = battleship_two[6];
                     beginning = battleship_two[3];
-                    spaces = battleship_two[0].concat(battleship_two[2]);
+                    spaces.push(battleship_two[0].concat(battleship_two[2]));
                     num = Number(battleship_two[2]);
 
 
-                    for ( i = 0; i < 4; i++) {
+                    for ( i = 0; i < 3; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(battleship_two[0].concat(nextSpace.toString));
@@ -288,6 +305,9 @@
 
                     sessionStorage.setItem("battleship_two", spaces);
 
+                    for (i = 0; i < 4; i++) {
+                        spaces.pop();
+                    }
                     alert("hey");
 
                 } else {
