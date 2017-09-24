@@ -335,7 +335,7 @@
                 player_one_score = sessionStorage.getItem("player_one_score");
                 player_two_score = sessionStorage.getItem("player_two_score");
 
-                if (player_one_score == 0 || player_two_score == 0) {
+                if (Number(player_one_score) == 0 || Number(player_two_score) == 0) {
                     gameOver = true;
                 }
             }
@@ -344,6 +344,37 @@
         function playerOneTurn() {
             var name = sessionStorage.getItem("player_one");
             alert("Click OK to begin " + name + "'s turn");
+
+            var player_one_air = sessionStorage.getItem("aircraft_one");
+            var player_one_battle = sessionStorage.getItem("battleship_one");
+            var player_one_sub = sessionStorage.getItem("sub_one");
+
+            var air_space;
+            for (var i = 0; i < 4; i++) {
+                air_space = player_one_air[0];
+                air_space.toLowerCase;
+                air_space.concat("b");
+                document.getElementById(air_space).innerHTML("A");
+            }
+
+            var battle_space;
+            for (var i = 0; i < 4; i++) {
+                battle_space = player_one_air[0];
+                battle_space.toLowerCase;
+                battle_space.concat("b");
+                document.getElementById(air_space).innerHTML("A");
+            }
+
+            var sub_space;
+            for (var i = 0; i < 2; i++) {
+                sub_space = player_one_air[0];
+                sub_space.toLowerCase;
+                sub_space.concat("b");
+                document.getElementById(air_space).innerHTML("A");
+            }
+
+            sessionStorage.setItem("player_one_score", "0");
+
         }
 
         function playerTwoTurn() {
