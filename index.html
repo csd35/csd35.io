@@ -67,30 +67,30 @@
 
 
 
-                var i = window.localStorage.length;
+                var i = window.sessionStorage.length;
 
-                window.localStorage.setItem(i, response);
+                window.sessionStorage.setItem(i, response);
 
 
 
-                i = window.localStorage.length;
+                i = window.sessionStorage.length;
                 response = prompt("Where do you want to place your ships?");
-                localStorage.setItem(i, response);
+                sessionStorage.setItem(i, response);
 
-                i = window.localStorage.length;
+                i = window.sessionStorage.length;
                 response = prompt("What is your name?");
-                localStorage.setItem(i, response);
+                sessionStorage.setItem(i, response);
 
-                i = window.localStorage.length;
+                i = window.sessionStorage.length;
                 response = prompt("Where do you want to place your ships?");
-                localStorage.setItem(i, response);
+                sessionStorage.setItem(i, response);
 
-                var stringOne = localStorage.key("player_one");
-                var stringTwo = localStorage.key("player_two");
-                var stringThree = localStorage.key("player_one_ships");
-                var stringFour = localStorage.key("player_two_ships");
+                var stringOne = sessionStorage.key("player_one");
+                var stringTwo = sessionStorage.key("player_two");
+                var stringThree = sessionStorage.key("player_one_ships");
+                var stringFour = sessionStorage.key("player_two_ships");
 
-                alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
+                alert("The first player is " + stringOne.toString + " The second player is " + stringTwo.toString + " Player one has ships at " + stringThree.toString + " and player two has ships at " + stringFour.toString);
 
              }
 
