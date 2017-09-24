@@ -57,7 +57,7 @@
     </table>
 
     <script type="text/javascript">
-        alert("start");
+      
         window.onload = start();
 
         playGame();
@@ -161,7 +161,7 @@
                 console.log(aircraft_one[2]);
                 console.log(aircraft_one[5]);
                 if (aircraft_one[2] == aircraft_one[5]) {
-                    alert("first");
+
                     end = aircraft_one[6];
                     beginning = aircraft_one[3];
                     spaces.push(aircraft_one[0].concat(aircraft_one[2]));
@@ -180,7 +180,6 @@
                         spaces.pop();
                     }
 
-                    alert("hey"); 
 
                 } else {
 
@@ -201,7 +200,7 @@
                     }
 
                     sessionStorage.setItem("aircraft_two", spaces);
-                    alert("hey");
+           
                     for (i = 0; i < 5; i++) {
                         spaces.pop();
                     }
@@ -226,7 +225,7 @@
                     }
 
                     sessionStorage.setItem("sub_one", spaces);
-                    alert("hey");
+
                     for (i = 0; i < 3; i++) {
                         spaces.pop();
                     }
@@ -253,7 +252,7 @@
 
                     sessionStorage.setItem("sub_two", spaces);
 
-                    alert("hey");
+             
 
                     for (i = 0; i < 3; i++) {
                         spaces.pop();
@@ -279,7 +278,7 @@
                     }
 
                     sessionStorage.setItem("battleship_one", spaces);
-                    alert("hey");
+           
 
                     for (i = 0; i < 4; i++) {
                         spaces.pop();
@@ -308,7 +307,7 @@
                     for (i = 0; i < 4; i++) {
                         spaces.pop();
                     }
-                    alert("hey");
+           
 
                 } else {
 
@@ -329,7 +328,7 @@
             var player_two_score = 24;
             sessionStorage.setItem("player_one_score", player_one_score);
             sessionStorage.setItem("player_two_score", player_two_score);
-            while (!gameOver) {
+            //while (!gameOver) {
                 playerOneTurn();
                 playerTwoTurn();
                 player_one_score = sessionStorage.getItem("player_one_score");
@@ -338,7 +337,7 @@
                 if (Number(player_one_score) == 0 || Number(player_two_score) == 0) {
                     gameOver = true;
                 }
-            }
+            //}
         }
 
         function playerOneTurn() {
