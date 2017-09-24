@@ -75,7 +75,43 @@
 
                 i = window.sessionStorage.length;
                 response = prompt("Where do you want to place your ships?");
-                sessionStorage.setItem(i, response);
+                var ships = response.split(";");
+                var ship_one = ships[0].split("");
+                var ship_two = ships[1].split("");
+                var ship_three = ships[2].split("");
+
+                var aircraft_one; var battleship_one; var sub_one;
+
+                switch (ship_one[0]) {
+                    case "A": aircraft_one = ship_one;
+                        break;
+                    case "B": battleship_one = ship_one;
+                        break;
+                    case "S": sub_one = ship_one;
+                        break;
+                }
+
+                switch (ship_two[0]) {
+                    case "A": aircraft_one = ship_two;
+                        break;
+                    case "B": battleship_one = ship_two;
+                        break;
+                    case "S": sub_one = ship_two;
+                        break;
+                }
+
+                switch (ship_one[0]) {
+                    case "A": aircraft_one = ship_three;
+                        break;
+                    case "B": battleship_one = ship_three;
+                        break;
+                    case "S": sub_one = ship_three;
+                        break;
+                }
+                
+                sessionStorage.setItem("aircraft_one", aircraft_one);
+                sessionStorage.setItem("battleship_one", battleship_one);
+                sessionStorage.setItem("sub_one", sub_one);
 
                 i = window.sessionStorage.length;
                 response = prompt("What is your name?");
@@ -83,15 +119,46 @@
 
                 i = window.sessionStorage.length;
                 response = prompt("Where do you want to place your ships?");
-                sessionStorage.setItem(i, response);
 
-                var stringOne = sessionStorage.key("player_one");
-                var stringTwo = sessionStorage.key("player_two");
-                var stringThree = sessionStorage.key("player_one_ships");
-                var stringFour = sessionStorage.key("player_two_ships");
+                ships = response.split(";");
+                ship_one = ships[0].split("");
+                ship_two = ships[1].split("");
+                ship_three = ships[2].split("");
 
-                alert("The first player is " + stringOne.valueOf  + " The second player is " + stringTwo.valueOf + " Player one has ships at " + stringThree.valueOf + " and player two has ships at " + stringFour.valueOf);
+                var aircraft_two; var battleship_two; var sub_two;
 
+                switch (ship_one[0]) {
+                    case "A": aircraft_two = ship_one;
+                        break;
+                    case "B": battleship_two = ship_one;
+                        break;
+                    case "S": sub_two = ship_one;
+                        break;
+                }
+
+                switch (ship_two[0]) {
+                    case "A": aircraft_two = ship_two;
+                        break;
+                    case "B": battleship_two = ship_two;
+                        break;
+                    case "S": sub_two = ship_two;
+                        break;
+                }
+
+                switch (ship_one[0]) {
+                    case "A": aircraft_two = ship_three;
+                        break;
+                    case "B": battleship_two = ship_three;
+                        break;
+                    case "S": sub_two = ship_three;
+                        break;
+                }
+
+                sessionStorage.setItem("aircraft_two", aircraft_two);
+                sessionStorage.setItem("battleship_two", battleship_two);
+                sessionStorage.setItem("sub_two", sub_two);
+
+               
              }
 
 
