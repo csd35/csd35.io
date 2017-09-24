@@ -57,7 +57,7 @@
     </table>
 
     <script type="text/javascript">
-        
+        alert("start");
         window.onload = start();
 
         playGame();
@@ -173,7 +173,7 @@
 
                     sessionStorage.setItem("aircraft_one", spaces);
 
-                    alert("hey");
+                    alert("hey"); 
 
                 } else {
 
@@ -246,11 +246,11 @@
 
                 }
 
+                beginning = battleship_one[3];
 
                 if (battleship_one[2] == battleship_one[5]) {
 
                     end = battleship_one[6];
-                    beginning = battleship_one[3];
                     spaces = battleship_one[0].concat(battleship_one[2]);
                     num = Number(battleship_one[2]);
 
