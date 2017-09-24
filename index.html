@@ -156,16 +156,16 @@
                         break;
                 }
 
-                var end; var beginning; var spaces; var nextSpace; var newLength; var num;
+                var end; var beginning; var spaces; var nextSpace; var newLength; var num; var i;
                 if (aircraft_one[2] == aircraft_one[5]) {
-
+                    alert("first");
                     end = aircraft_one[6];
                     beginning = aircraft_one[3];
                     spaces = aircraft_one[0].concat(aircraft_one[2]);
                     num = Number(aircraft_one[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(aircraft_one[0].concat(nextSpace.toString));
@@ -187,7 +187,7 @@
                     num = Number(aircraft_two[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(aircraft_two[0].concat(nextSpace.toString));
@@ -209,7 +209,7 @@
                     num = Number(sub_one[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(sub_one[0].concat(nextSpace.toString));
@@ -232,7 +232,7 @@
                     num = Number(sub_two[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(sub_two[0].concat(nextSpace.toString));
@@ -255,7 +255,7 @@
                     num = Number(battleship_one[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(battleship_one[0].concat(nextSpace.toString));
@@ -277,7 +277,7 @@
                     num = Number(battleship_two[2]);
 
 
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < 4; i++) {
                         nextSpace = num + 1;
 
                         newLength = spaces.push(battleship_two[0].concat(nextSpace.toString));
