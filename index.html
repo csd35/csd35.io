@@ -92,6 +92,32 @@
                 alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
 
              }
+=======
+                
+                
+                localStorage.setItem("player_one", response);
+
+
+                alert("hey");
+            
+              response = prompt("Where do you want to place your ships?");
+             localStorage.setItem("player_one_ships", response);
+
+
+               response = prompt("What is your name?");
+                 localStorage.setItem("player_two", response);
+
+                    response = prompt("Where do you want to place your ships?");
+                     localStorage.setItem("player_two_ships", response);
+
+                      var stringOne = localStorage.key("player_one");
+                       var stringTwo = localStorage.key("player_two");
+                         var stringThree = localStorage.key("player_one_ships");
+                         var stringFour = localStorage.key("player_two_ships");
+
+             alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
+            }
+>>>>>>> 3d9acc462b4db44caf21882a3189d664c1dd47ff
          }
     </script>
 </body>
