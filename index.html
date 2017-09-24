@@ -67,13 +67,13 @@
 
 
 
-                var i = window.sessionStorage.length;
+               
 
-                window.sessionStorage.setItem(i, response);
+                window.sessionStorage.setItem("player_one", response);
 
 
 
-                i = window.sessionStorage.length;
+           
                 response = prompt("Where do you want to place your ships?");
                 var ships = response.split(";");
                 var ship_one = ships[0].split("");
@@ -100,7 +100,7 @@
                         break;
                 }
 
-                switch (ship_one[0]) {
+                switch (ship_three[0]) {
                     case "A": aircraft_one = ship_three;
                         break;
                     case "B": battleship_one = ship_three;
@@ -113,11 +113,11 @@
                 sessionStorage.setItem("battleship_one", battleship_one);
                 sessionStorage.setItem("sub_one", sub_one);
 
-                i = window.sessionStorage.length;
+               
                 response = prompt("What is your name?");
-                sessionStorage.setItem(i, response);
+                sessionStorage.setItem("player_two", response);
 
-                i = window.sessionStorage.length;
+                
                 response = prompt("Where do you want to place your ships?");
 
                 ships = response.split(";");
@@ -145,7 +145,7 @@
                         break;
                 }
 
-                switch (ship_one[0]) {
+                switch (ship_three[0]) {
                     case "A": aircraft_two = ship_three;
                         break;
                     case "B": battleship_two = ship_three;
