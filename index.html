@@ -62,34 +62,36 @@
 
         function start() {
             if (typeof (Storage) !== "undefined") {
-              //  var response = prompt("What is your name?");
-                //alert(";lkj");
-              
-                //alert("her");
+                var response = prompt("What is your name?");
+
+
+
                 var i = window.localStorage.length;
-                alert("lkj");
-                window.localStorage.setItem(i, "smith");
+
+                window.localStorage.setItem(i, response);
 
 
-                alert("hey");
-            }
-             // response = prompt("Where do you want to place your ships?");
-             //localStorage.setItem("player_one_ships", response);
 
+                i = window.localStorage.length;
+                response = prompt("Where do you want to place your ships?");
+                localStorage.setItem(i, response);
 
-             //  response = prompt("What is your name?");
-             //    localStorage.setItem("player_two", response);
+                i = window.localStorage.length;
+                response = prompt("What is your name?");
+                localStorage.setItem(i, response);
 
-             //       response = prompt("Where do you want to place your ships?");
-             //        localStorage.setItem("player_two_ships", response);
+                i = window.localStorage.length;
+                response = prompt("Where do you want to place your ships?");
+                localStorage.setItem(i, response);
 
-             //         var stringOne = localStorage.key("player_one");
-             //           var stringTwo = localStorage.key("player_two");
-             //            var stringThree = localStorage.key("player_one_ships");
-             //            var stringFour = localStorage.key("player_two_ships");
+                var stringOne = localStorage.key("player_one");
+                var stringTwo = localStorage.key("player_two");
+                var stringThree = localStorage.key("player_one_ships");
+                var stringFour = localStorage.key("player_two_ships");
 
-             //alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
+                alert("The first player is " + stringOne + " The second player is " + stringTwo + " Player one has ships at " + stringThree + " and player two has ships at " + stringFour);
 
+             }
          }
     </script>
 </body>
