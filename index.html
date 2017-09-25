@@ -416,7 +416,7 @@
         }
 
         function playerOneTurn() {
-            clearPlayerTwoBoard();
+            
             var name = sessionStorage.getItem("player_one");
             alert("Click OK to begin " + name + "'s turn");
 
@@ -460,12 +460,12 @@
             sessionStorage.setItem("player_one_score", "0");
 
             alert("click ok to end turn");
-          
+            clearPlayerOneBoard();
             
         }
 
         function playerTwoTurn() {
-            clearPlayerOneBoard();
+            
             var name_two = sessionStorage.getItem("player_two");
             alert("Click OK to begin " + name_two + "'s turn");
 
@@ -508,6 +508,7 @@
 
             sessionStorage.setItem("player_two_score", "0");
             alert("click ok to end turn");
+            clearPlayerTwoBoard();
         }
 
         function clearPlayerOneBoard() {
