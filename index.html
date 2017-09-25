@@ -353,7 +353,7 @@
                 air_space = player_one_air[0];
               
                 air_space.concat("b");
-                document.getElementById(air_space).innerHTML = "A";
+                document.getElementById(air_space.valueOf()).innerHTML = "A";
             }
 
             var battle_space;
@@ -361,7 +361,7 @@
                 battle_space = player_one_air[0];
                
                 battle_space.concat("b");
-                document.getElementById(air_space).innerHTML = "B";
+                document.getElementById(battle_space.valueOf()).innerHTML = "B";
             }
 
             var sub_space;
@@ -369,7 +369,7 @@
                 sub_space = player_one_air[0];
               
                 sub_space.concat("b");
-                document.getElementById(air_space).innerHTML = "C";
+                document.getElementById(sub_space.valueOf()).innerHTML = "C";
             }
 
             sessionStorage.setItem("player_one_score", "0");
