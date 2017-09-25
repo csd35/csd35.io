@@ -169,9 +169,9 @@
 
 
                     for ( i = 0; i < 4; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
                       
-                      spaces.push(aircraft_one[0].concat(nextSpace.toString()));
+                      spaces.push(aircraft_one[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("aircraft_one", spaces);
@@ -194,9 +194,9 @@
 
 
                     for ( i = 0; i < 4; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
 
-                        spaces.push(aircraft_two[0].concat(nextSpace.toString()));
+                        spaces.push(aircraft_two[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("aircraft_two", spaces);
@@ -219,9 +219,9 @@
 
 
                     for ( i = 0; i < 2; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
 
-                     spaces.push(sub_one[0].concat(nextSpace.toString()));
+                        spaces.push(sub_one[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("sub_one", spaces);
@@ -245,9 +245,9 @@
 
 
                     for ( i = 0; i < 2; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
 
-                        newLength = spaces.push(sub_two[0].concat(nextSpace.toString()));
+                        newLength = spaces.push(sub_two[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("sub_two", spaces);
@@ -272,9 +272,9 @@
 
 
                     for ( i = 0; i < 3; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
 
-                        newLength = spaces.push(battleship_one[0].concat(nextSpace.toString()));
+                        newLength = spaces.push(battleship_one[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("battleship_one", spaces);
@@ -297,9 +297,9 @@
 
 
                     for ( i = 0; i < 3; i++) {
-                        nextSpace = num + 1;
+                        num = num + 1;
              
-                        newLength = spaces.push(battleship_two[0].concat(nextSpace.toString()));
+                        newLength = spaces.push(battleship_two[0].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("battleship_two", spaces);
