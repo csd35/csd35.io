@@ -349,34 +349,30 @@
             var player_one_sub = sessionStorage.getItem("sub_one");
 
             var air_space;
-            for (var i = 0; i < 4; i++) {
-                air_space = player_one_air[0];
-                air_space.concat(player_one_air[1]);
-                player_one_air.shift();
-                player_one_air.shift();
+            for (var i = 0; i < 8; i=i+2) {
+                air_space = player_one_air[i];
+                air_space.concat(player_one_air[i+1]);
+                
                 air_space.concat("b");
                 console.log(air_space);
                 document.getElementById("A1b").innerHTML = "A";
             }
 
             var battle_space;
-            for (var i = 0; i < 4; i++) {
-                battle_space = player_one_battle[0];
-                battle_space.concat(player_one_battle[1]);
-                player_one_battle.shift();
-                player_one_battle.shift();
+            for (var i = 0; i < 6; i=i+2) {
+                battle_space = player_one_battle[i];
+                battle_space.concat(player_one_battle[i+1]);
+                
                 battle_space.concat("b");
                 console.log(battle_space);
                 document.getElementById("B1b").innerHTML = "B";
             }
 
             var sub_space;
-            for (var i = 0; i < 2; i++) {
-                sub_space = player_one_sub[0];
-                sub_space.concat(player_one_sub[1]);
-                player_one_sub.shift();
-                player_one_sub.shift();
-              
+            for (var i = 0; i < 4; i=i+2) {
+                sub_space = player_one_sub[i];
+                sub_space.concat(player_one_sub[i+1]);
+                             
                 sub_space.concat("b");
                 console.log(sub_space);
                 document.getElementById("C1b").innerHTML = "S";
