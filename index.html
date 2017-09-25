@@ -351,7 +351,9 @@
             var air_space;
             for (var i = 0; i < 4; i++) {
                 air_space = player_one_air[0];
-              
+                air_space.concat(player_one_air[1]);
+                player_one_air.shift();
+                player_one_air.shift();
                 air_space.concat("b");
                 console.log(air_space);
                 document.getElementById("A1b").innerHTML = "A";
@@ -359,8 +361,10 @@
 
             var battle_space;
             for (var i = 0; i < 4; i++) {
-                battle_space = player_one_air[0];
-               
+                battle_space = player_one_battle[0];
+                battle_space.concat(player_one_battle[1]);
+                player_one_battle.shift();
+                player_one_battle.shift();
                 battle_space.concat("b");
                 console.log(battle_space);
                 document.getElementById("B1b").innerHTML = "B";
@@ -368,7 +372,10 @@
 
             var sub_space;
             for (var i = 0; i < 2; i++) {
-                sub_space = player_one_air[0];
+                sub_space = player_one_sub[0];
+                sub_space.concat(player_one_sub[1]);
+                player_one_sub.shift();
+                player_one_sub.shift();
               
                 sub_space.concat("b");
                 console.log(sub_space);
