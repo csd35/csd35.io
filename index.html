@@ -344,9 +344,9 @@
             var name = sessionStorage.getItem("player_one");
             alert("Click OK to begin " + name + "'s turn");
 
-            var player_one_air = sessionStorage.getItem("aircraft_one");
-            var player_one_battle = sessionStorage.getItem("battleship_one");
-            var player_one_sub = sessionStorage.getItem("sub_one");
+            var player_one_air = sessionStorage.getItem("aircraft_one").split(",");
+            var player_one_battle = sessionStorage.getItem("battleship_one").split(",");
+            var player_one_sub = sessionStorage.getItem("sub_one").split(",");
 
             var air_space;
             for (var i = 0; i < 8; i=i+2) {
