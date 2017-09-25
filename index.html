@@ -348,9 +348,15 @@
             var player_one_battle = sessionStorage.getItem("battleship_one").split(",");
             var player_one_sub = sessionStorage.getItem("sub_one").split(",");
 
+
             document.write(player_one_air + " ");
             document.write(player_one_battle + " ");
             document.write(player_one_sub + " ");
+            document.write(player_one_air[0]);
+            document.write(player_one_air[1]);
+            document.write(player_one_air[2]);
+            document.write(player_one_air[3]);
+            document.write(player_one_air[4]);
 
             var air_space;
             for (var i = 0; i < 8; i=i+2) {
