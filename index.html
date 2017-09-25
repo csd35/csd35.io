@@ -354,7 +354,7 @@
                 air_space.concat(player_one_air[i+1]);
                 
                 air_space.concat("b");
-                console.log(air_space);
+                document.write(air_space);
                 document.getElementById("A1b").innerHTML = "A";
             }
 
@@ -364,7 +364,7 @@
                 battle_space.concat(player_one_battle[i+1]);
                 
                 battle_space.concat("b");
-                console.log(battle_space);
+                document.write(battle_space);
                 document.getElementById("B1b").innerHTML = "B";
             }
 
@@ -374,15 +374,16 @@
                 sub_space.concat(player_one_sub[i+1]);
                              
                 sub_space.concat("b");
-                console.log(sub_space);
+                document.write(sub_space);
                 document.getElementById("C1b").innerHTML = "S";
             }
 
             sessionStorage.setItem("player_one_score", "0");
             console.log("hello");
-            console.log(player_one_air);
-            console.log(player_one_battle);
-            console.log(player_one_sub);
+            document.write(player_one_air);
+            document.write(player_one_battle);
+            document.write(player_one_sub);
+            
         }
 
         function playerTwoTurn() {
