@@ -515,13 +515,83 @@
 
         }
 
-        function clearBoard() {
-            var table = document.getElementById("table_bottom");
-            for (var i = 0, cell; cell = table.cells[i]; i++) {
-                cell.innerHTML = "f";
+        function clearPlayerOneBoard() {
+            var player_one_air = sessionStorage.getItem("aircraft_one").split(",");
+            var player_one_battle = sessionStorage.getItem("battleship_one").split(",");
+            var player_one_sub = sessionStorage.getItem("sub_one").split(",");
+
+
+
+
+            var air_space;
+            for (var i = 0; i < 5; i++) {
+                air_space = player_one_air[i];
+
+
+                air_space = air_space.concat("b");
+
+                document.getElementById(air_space).innerHTML = "";
+            }
+
+            var battle_space;
+            for (var i = 0; i < 4; i++) {
+                battle_space = player_one_battle[i];
+
+
+                battle_space = battle_space.concat("b");
+
+                document.getElementById(battle_space).innerHTML = "";
+            }
+
+            var sub_space;
+            for (var i = 0; i < 3; i++) {
+                sub_space = player_one_sub[i];
+
+
+                sub_space = sub_space.concat("b");
+
+                document.getElementById(sub_space).innerHTML = "";
             }
         }
 
+        function clearPlayerTwoBoard() {
+            var player_two_air = sessionStorage.getItem("aircraft_two").split(",");
+            var player_two_battle = sessionStorage.getItem("battleship_two").split(",");
+            var player_two_sub = sessionStorage.getItem("sub_two").split(",");
+
+
+
+
+            var air_space;
+            for (var i = 0; i < 5; i++) {
+                air_space = player_two_air[i];
+
+
+                air_space = air_space.concat("b");
+
+                document.getElementById(air_space).innerHTML = "";
+            }
+
+            var battle_space;
+            for (var i = 0; i < 4; i++) {
+                battle_space = player_two_battle[i];
+
+
+                battle_space = battle_space.concat("b");
+
+                document.getElementById(battle_space).innerHTML = "";
+            }
+
+            var sub_space;
+            for (var i = 0; i < 3; i++) {
+                sub_space = player_two_sub[i];
+
+
+                sub_space = sub_space.concat("b");
+
+                document.getElementById(sub_space).innerHTML = "";
+            }
+        }
        
 
     </script>
