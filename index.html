@@ -164,14 +164,14 @@
 
                     end = aircraft_one[6];
                     beginning = aircraft_one[3];
-                    spaces.push(aircraft_one[0].concat(beginning));
+                    spaces.push(aircraft_one[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 4; i++) {
                         num = num + 1;
                       
-                      spaces.push(aircraft_one[0].concat(num.toString()));
+                      spaces.push(aircraft_one[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("aircraft_one", spaces);
@@ -189,14 +189,14 @@
 
                     end = aircraft_two[6];
                     beginning = aircraft_two[3];
-                    spaces.push(aircraft_two[0].concat(beginning));
+                    spaces.push(aircraft_two[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 4; i++) {
                         num = num + 1;
 
-                        spaces.push(aircraft_two[0].concat(num.toString()));
+                        spaces.push(aircraft_two[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("aircraft_two", spaces);
@@ -214,14 +214,14 @@
 
                     end = sub_one[6];
                     beginning = sub_one[3];
-                    spaces.push(sub_one[0].concat(beginning));
+                    spaces.push(sub_one[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 2; i++) {
                         num = num + 1;
 
-                        spaces.push(sub_one[0].concat(num.toString()));
+                        spaces.push(sub_one[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("sub_one", spaces);
@@ -240,14 +240,14 @@
 
                     end = sub_two[6];
                     beginning = sub_two[3];
-                    spaces.push(sub_two[0].concat(beginning));
+                    spaces.push(sub_two[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 2; i++) {
                         num = num + 1;
 
-                        newLength = spaces.push(sub_two[0].concat(num.toString()));
+                        newLength = spaces.push(sub_two[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("sub_two", spaces);
@@ -267,14 +267,14 @@
                 if (battleship_one[2] == battleship_one[5]) {
                     beginning = battleship_one[3];
                     end = battleship_one[6];
-                    spaces.push(battleship_one[0].concat(beginning));
+                    spaces.push(battleship_one[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 3; i++) {
                         num = num + 1;
 
-                        newLength = spaces.push(battleship_one[0].concat(num.toString()));
+                        newLength = spaces.push(battleship_one[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("battleship_one", spaces);
@@ -292,14 +292,14 @@
 
                     end = battleship_two[6];
                     beginning = battleship_two[3];
-                    spaces.push(battleship_two[0].concat(beginning));
+                    spaces.push(battleship_two[2].concat(beginning));
                     num = Number(beginning);
 
 
                     for ( i = 0; i < 3; i++) {
                         num = num + 1;
              
-                        newLength = spaces.push(battleship_two[0].concat(num.toString()));
+                        newLength = spaces.push(battleship_two[2].concat(num.toString()));
                     }
 
                     sessionStorage.setItem("battleship_two", spaces);
