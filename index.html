@@ -359,9 +359,9 @@
             document.write(player_one_air[4]);
 
             var air_space;
-            for (var i = 0; i < 8; i=i+2) {
+            for (var i = 0; i < 5; i++) {
                 air_space = player_one_air[i];
-                air_space.concat(player_one_air[i+1]);
+                
                 
                 air_space.concat("b");
                 document.write(air_space + " ");
@@ -369,9 +369,9 @@
             }
 
             var battle_space;
-            for (var i = 0; i < 6; i=i+2) {
+            for (var i = 0; i < 4; i++) {
                 battle_space = player_one_battle[i];
-                battle_space.concat(player_one_battle[i+1]);
+               
                 
                 battle_space.concat("b");
                 document.write(battle_space + " ");
@@ -379,9 +379,9 @@
             }
 
             var sub_space;
-            for (var i = 0; i < 4; i=i+2) {
+            for (var i = 0; i < 3; i++) {
                 sub_space = player_one_sub[i];
-                sub_space.concat(player_one_sub[i+1]);
+        
                              
                 sub_space.concat("b");
                 document.write(sub_space + " ");
