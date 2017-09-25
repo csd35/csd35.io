@@ -405,6 +405,7 @@
             sessionStorage.setItem("player_two_score", player_two_score);
             //while (!gameOver) {
                 playerOneTurn();
+                clearBoard();
                 playerTwoTurn();
                 player_one_score = sessionStorage.getItem("player_one_score");
                 player_two_score = sessionStorage.getItem("player_two_score");
@@ -461,32 +462,7 @@
 
             alert("click ok to end turn");
 
-            for (var i = 0; i < 5; i++) {
-                air_space = player_one_air[i];
-
-
-                air_space = air_space.concat("b");
-
-                document.getElementById(air_space).innerHTML = " ";
-            }
-
-            for (var i = 0; i < 4; i++) {
-                battle_space = player_one_battle[i];
-
-
-                battle_space = battle_space.concat("b");
-
-                document.getElementById(battle_space).innerHTML = " ";
-            }
-           
-            for (var i = 0; i < 3; i++) {
-                sub_space = player_one_sub[i];
-
-
-                sub_space = sub_space.concat("b");
-
-                document.getElementById(sub_space).innerHTML = " ";
-            }
+            
         }
 
         function playerTwoTurn() {
@@ -534,34 +510,16 @@
             sessionStorage.setItem("player_two_score", "0");
             alert("click ok to end turn");
 
-            for (var i = 0; i < 5; i++) {
-                air_space = player_two_air[i];
+            
 
 
-                air_space = air_space.concat("b");
+        }
 
-                document.getElementById(air_space).innerHTML = " ";
+        function clearBoard() {
+            var table = document.getElementById("table_bottom");
+            for (var i = 0, cell; cell = table.cells[i]; i++) {
+                cell.innerHTML = "";
             }
-
-            for (var i = 0; i < 4; i++) {
-                battle_space = player_two_battle[i];
-
-
-                battle_space = battle_space.concat("b");
-
-                document.getElementById(battle_space).innerHTML = " ";
-            }
-
-            for (var i = 0; i < 3; i++) {
-                sub_space = player_two_sub[i];
-
-
-                sub_space = sub_space.concat("b");
-
-                document.getElementById(sub_space).innerHTML = " ";
-            }
-
-
         }
 
        
