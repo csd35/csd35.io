@@ -61,7 +61,7 @@
     <script type="text/javascript">
       
         window.onload = start();
-
+        var buttonPressed = false;
         playGame();
 
 
@@ -396,6 +396,12 @@
 
         }
 
+        function fire(e) {
+            var data = e.target.id;
+            alert(data);
+            buttonPressed = true;
+        }
+
 
         function playGame() {
             var gameOver = false;
@@ -403,6 +409,19 @@
             var player_two_score = 24;
             sessionStorage.setItem("player_one_score", player_one_score);
             sessionStorage.setItem("player_two_score", player_two_score);
+
+            var rows = document.getElementById("table_top").rows;
+            var i; var j; var row; var cell;
+
+            for (i = 1; i < 11; i++) {
+                row = rows[i];
+                for (j = 1; j < 11; j++) {
+                    cell = row[j];
+                    cell.addEventListener("click", fire, false);
+                    cell.style.backgroundColor = "purple";
+                }
+
+            }
             //while (!gameOver) {
                 playerOneTurn();
                 clearPlayerOneBoard();
@@ -461,6 +480,8 @@
 
             sessionStorage.setItem("player_one_score", "0");
 
+            wait();
+            buttonPressed = false;
             alert("click ok to end turn");
 
             
@@ -509,6 +530,8 @@
             }
 
             sessionStorage.setItem("player_two_score", "0");
+            wait();
+            buttonPressed = false;
             alert("click ok to end turn");
 
             
@@ -591,6 +614,12 @@
                 sub_space = sub_space.concat("b");
 
                 document.getElementById(sub_space).innerHTML = "";
+            }
+        }
+
+        function wait() {
+            if (!buttonPressed) {
+                setTimeout(wait, 2500);
             }
         }
        
