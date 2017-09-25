@@ -405,8 +405,9 @@
             sessionStorage.setItem("player_two_score", player_two_score);
             //while (!gameOver) {
                 playerOneTurn();
-                clearBoard();
+                clearPlayerOneBoard();
                 playerTwoTurn();
+                clearPlayerTwoBoard();
                 player_one_score = sessionStorage.getItem("player_one_score");
                 player_two_score = sessionStorage.getItem("player_two_score");
 
