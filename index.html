@@ -157,9 +157,9 @@
                 }
 
                 var end; var beginning; var spaces = []; var nextSpace; var num; var i; 
+                var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
-                console.log(aircraft_one[2]);
-                console.log(aircraft_one[5]);
+                
                 if (aircraft_one[2] == aircraft_one[5]) {
 
                     end = aircraft_one[6];
@@ -182,7 +182,19 @@
 
 
                 } else {
+                    i = 0;
+                    while (aircraft_one[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(aircraft_one[3]));
+                    }
+                    sessionStorage.setItem("aircraft_one", spaces);
 
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
                 }
 
                 if (aircraft_two[2] == aircraft_two[5]) {
@@ -207,7 +219,19 @@
 
 
                 } else {
+                    i = 0;
+                    while (aircraft_two[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(aircraft_two[3]));
+                    }
+                    sessionStorage.setItem("aircraft_two", spaces);
 
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
                 }
 
                 if (sub_one[2] == sub_one[5]) {
@@ -232,6 +256,19 @@
 
 
                 } else {
+                    i = 0;
+                    while (sub_one[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(sub_one[3]));
+                    }
+                    sessionStorage.setItem("sub_one", spaces);
+
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
 
                 }
 
@@ -259,7 +296,19 @@
                     }
 
                 } else {
+                    i = 0;
+                    while (sub_two[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(sub_two[3]));
+                    }
+                    sessionStorage.setItem("sub_two", spaces);
 
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
                 }
 
            
@@ -285,7 +334,19 @@
                     }
 
                 } else {
+                    i = 0;
+                    while (battleship_one[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(battleship_one[3]));
+                    }
+                    sessionStorage.setItem("battleship_one", spaces);
 
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
                 }
 
                 if (battleship_two[2] == battleship_two[5]) {
@@ -310,7 +371,19 @@
            
 
                 } else {
+                    i = 0;
+                    while (battleship_two[2] != letters[i]) {
+                        i++;
+                    }
+                    var j;
+                    for (j = i; j < i + 5; j++) {
+                        spaces.push(letters[j].concat(battleship_two[3]));
+                    }
+                    sessionStorage.setItem("battleship_two", spaces);
 
+                    for (i = 0; i < 5; i++) {
+                        spaces.pop();
+                    }
                 }
 
                 
@@ -357,7 +430,7 @@
                 
                 
                 air_space = air_space.concat("b");
-                document.write(air_space + " ");
+               
                 document.getElementById(air_space).innerHTML = "A";
             }
 
@@ -367,7 +440,7 @@
                
                 
                 battle_space= battle_space.concat("b");
-                document.write(battle_space + " ");
+          
                 document.getElementById(battle_space).innerHTML = "B";
             }
 
@@ -377,18 +450,58 @@
         
                              
                 sub_space= sub_space.concat("b");
-                document.write(sub_space + " ");
+                
                 document.getElementById(sub_space).innerHTML = "S";
             }
 
             sessionStorage.setItem("player_one_score", "0");
-            console.log("hello");
+       
           
             
         }
 
         function playerTwoTurn() {
+            var name_two = sessionStorage.getItem("player_two");
+            alert("Click OK to begin " + name_two + "'s turn");
 
+            var player_two_air = sessionStorage.getItem("aircraft_two").split(",");
+            var player_two_battle = sessionStorage.getItem("battleship_two").split(",");
+            var player_two_sub = sessionStorage.getItem("sub_two").split(",");
+
+
+
+
+            var air_space;
+            for (var i = 0; i < 5; i++) {
+                air_space = player_two_air[i];
+
+
+                air_space = air_space.concat("b");
+
+                document.getElementById(air_space).innerHTML = "A";
+            }
+
+            var battle_space;
+            for (var i = 0; i < 4; i++) {
+                battle_space = player_two_battle[i];
+
+
+                battle_space = battle_space.concat("b");
+
+                document.getElementById(battle_space).innerHTML = "B";
+            }
+
+            var sub_space;
+            for (var i = 0; i < 3; i++) {
+                sub_space = player_two_sub[i];
+
+
+                sub_space = sub_space.concat("b");
+
+                document.getElementById(sub_space).innerHTML = "S";
+            }
+
+            sessionStorage.setItem("player_two_score", "0");
         }
 
 
