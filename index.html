@@ -60,7 +60,7 @@
 
     <script type="text/javascript">
       
-        window.onload = start();
+       // window.onload = start();
         var buttonPressed = false;
         playGame();
 
@@ -397,8 +397,7 @@
         }
 
         function fire(e) {
-            var data = e.target.id;
-            alert(data);
+            alert("woah");
             buttonPressed = true;
         }
 
@@ -410,8 +409,7 @@
             sessionStorage.setItem("player_one_score", player_one_score);
             sessionStorage.setItem("player_two_score", player_two_score);
 
-            var cell = document.getElementById("A1a");
-            cell.addEventListener("click", fire());
+            
 
            
             //while (!gameOver) {
