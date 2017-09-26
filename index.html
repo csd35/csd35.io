@@ -410,6 +410,9 @@
             sessionStorage.setItem("player_one_score", player_one_score);
             sessionStorage.setItem("player_two_score", player_two_score);
 
+            var cell = document.getElementById("A1a");
+            cell.addEventListener("click", fire());
+
            
             //while (!gameOver) {
                 //playerOneTurn();
