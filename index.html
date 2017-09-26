@@ -29,7 +29,7 @@
     <div id=" divv">
         <table id="table_top">
             <tr><td><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th>
-            <tr><th>1</th><td id="A1a" onclick="fire"><td id="B1a"><td id="C1a"><td id="D1a"><td id="E1a"><td id="F1a"><td id="G1a"><td id="H1a"><td id="I1a"><td id="J1a">
+            <tr><th>1</th><td id="A1a" onclick="fire()"><td id="B1a"><td id="C1a"><td id="D1a"><td id="E1a"><td id="F1a"><td id="G1a"><td id="H1a"><td id="I1a"><td id="J1a">
             <tr><th>2</th><td id="A2a"><td id="B2a"><td id="C2a"><td id="D2a"><td id="E2a"><td id="F2a"><td id="G2a"><td id="H2a"><td id="I2a"><td id="J2a">
             <tr><th>3</th><td id="A3a"><td id="B3a"><td id="C3a"><td id="D3a"><td id="E3a"><td id="F3a"><td id="G3a"><td id="H3a"><td id="I3a"><td id="J3a">
             <tr><th>4</th><td id="A4a"><td id="B4a"><td id="C4a"><td id="D4a"><td id="E4a"><td id="F4a"><td id="G4a"><td id="H4a"><td id="I4a"><td id="J4a">
@@ -412,10 +412,10 @@
 
            
             //while (!gameOver) {
-                playerOneTurn();
-                clearPlayerOneBoard();
-                playerTwoTurn();
-                clearPlayerTwoBoard();
+                //playerOneTurn();
+                //clearPlayerOneBoard();
+                //playerTwoTurn();
+                //clearPlayerTwoBoard();
                 player_one_score = sessionStorage.getItem("player_one_score");
                 player_two_score = sessionStorage.getItem("player_two_score");
 
@@ -608,7 +608,7 @@
 
         function wait() {
             if (!buttonPressed) {
-                alert("hey");
+                
                 setTimeout(wait, 2500);
                 
             }
