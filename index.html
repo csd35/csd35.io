@@ -427,15 +427,13 @@
             var player_one_score = sessionStorage.getItem("player_one_score");
             var ship_health;
             var sink = false;
-            
+            buttonPressed = true;
             if (turn == 1) {
                 
                 aircraft = sessionStorage.getItem("aircraft_one").split(",");
                 battleship = sessionStorage.getItem("battleship_one").split(",");
                 sub = sessionStorage.getItem("sub_one").split(",");
-                alert(aircraft);
-                alert(battleship);
-                alert(sub);
+                
 
                 for (i = 0; i < aircraft.length; i++) {
                     if (aircraft[i] == space) {
