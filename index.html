@@ -621,7 +621,7 @@
             var player_one_sub = sessionStorage.getItem("sub_one").split(",");
 
 
-           
+            turn = 1;
 
             var air_space;
             for (var i = 0; i < 5; i++) {
@@ -663,7 +663,8 @@
         }
 
         function playerTwoTurn() {
-            
+
+            turn = 2;
             var name_two = sessionStorage.getItem("player_two");
             alert("Click OK to begin " + name_two + "'s turn");
 
