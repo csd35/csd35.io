@@ -427,11 +427,11 @@
             var player_one_score = sessionStorage.getItem("player_one_score");
             var ship_health;
             var sink = false;
-
+            alert("heyo");
             if (turn == 1) {
-
+                alert("turn 1");
                 aircraft = sessionStorage.getItem("aircraft_one").split(",");
-                battleship = sessionStorage.getItem("battle_one").split(",");
+                battleship = sessionStorage.getItem("battleship_one").split(",");
                 sub = sessionStorage.getItem("sub_one").split(",");
 
                 for (i = 0; i < aircraft.length; i++) {
@@ -449,6 +449,8 @@
 
                     }
                 }
+
+                alert("yeyo");
 
                 for (i = 0; i < battleship.length; i++) {
                     if (battleship[i] == space) {
@@ -479,8 +481,9 @@
                         sessionStorage.setItem("sub_two_health", ship_health);
                     }
                 }
-
+                alert("l;fsakj");
                 if (hit) {
+                    alert("hit");
                     document.getElementById(id).style.backgroundColor = "red";
                     player_two_score = player_two_score - 2;
                     hits = sessionStorage.getItem("player_one_hits");
@@ -502,6 +505,7 @@
                     sessionStorage.setItem("player_one_misses", misses);
 
                     alert("It's a miss!");
+                    alert("miss");
                 }
 
                 
@@ -509,7 +513,7 @@
             } else {
 
                 aircraft = sessionStorage.getItem("aircraft_two").split(",");
-                battleship = sessionStorage.getItem("battle_two").split(",");
+                battleship = sessionStorage.getItem("battleship_two").split(",");
                 sub = sessionStorage.getItem("sub_two").split(",");
 
                 for (i = 0; i < aircraft.length; i++) {
