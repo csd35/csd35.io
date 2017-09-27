@@ -422,17 +422,20 @@
             alert(id)
             var aircraft; var battleship; var sub; var i;
             var hit = false;
-            var hits; var misses;
+            var hits = []; var misses = [];
             var player_two_score = sessionStorage.getItem("player_two_score");
             var player_one_score = sessionStorage.getItem("player_one_score");
             var ship_health;
             var sink = false;
-            alert("heyo");
+            
             if (turn == 1) {
-                alert("turn 1");
+                
                 aircraft = sessionStorage.getItem("aircraft_one").split(",");
                 battleship = sessionStorage.getItem("battleship_one").split(",");
                 sub = sessionStorage.getItem("sub_one").split(",");
+                alert(aircraft);
+                alert(battleship);
+                alert(sub);
 
                 for (i = 0; i < aircraft.length; i++) {
                     if (aircraft[i] == space) {
