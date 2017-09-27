@@ -598,10 +598,10 @@
 
            
             //while (!gameOver) {
-                //playerOneTurn();
-                //clearPlayerOneBoard();
-                //playerTwoTurn();
-                //clearPlayerTwoBoard();
+                playerOneTurn();
+                clearPlayerOneBoard();
+                playerTwoTurn();
+                clearPlayerTwoBoard();
                 player_one_score = sessionStorage.getItem("player_one_score");
                 player_two_score = sessionStorage.getItem("player_two_score");
 
@@ -657,7 +657,7 @@
 
             wait();
             buttonPressed = false;
-            alert("click ok to end turn");
+          
 
             
         }
@@ -707,7 +707,7 @@
             sessionStorage.setItem("player_two_score", "0");
             wait();
             buttonPressed = false;
-            alert("click ok to end turn");
+            
 
             
 
@@ -795,7 +795,7 @@
         function wait() {
             if (!buttonPressed) {
                 
-                setTimeout(wait, 2500);
+                setTimeout(wait(), 2500);
                 
             }
         }
