@@ -59,10 +59,29 @@
      </div>
 
     <script type="text/javascript">
-      
-       // window.onload = start();
         var buttonPressed = false;
         var turn = 1;
+        var player_one_hits = [];
+        var player_one_misses = [];
+        var player_two_hits = [];
+        var player_two_misses = [];
+        var airHealth = 5;
+        var battlehealth = 4;
+        var subHealth = 3;
+
+        sessionStorage.setItem("player_one_hits", player_one_hits);
+        sessionStorage.setItem("player_one_misses", player_one_misses);
+        sessionStorage.setItem("player_two_hits", player_two_hits);
+        sessionStorage.setItem("player_two_misses", player_two_misses);
+
+        sessionStorage.setItem("aircraft_one_health", airHealth);
+        sessionStorage.setItem("aircraft_two_health", airHealth);
+        sessionStorage.setItem("battle_one_health", battlehealth);
+        sessionStorage.setItem("battle_two_health", battlehealth);
+        sessionStorage.setItem("sub_one_health", subHealth);
+        sessionStorage.setItem("sub_two_health", subHealth);
+        window.onload = start();
+        
         playGame();
 
 
@@ -399,8 +418,171 @@
 
         function fire(id) {
 
-            document.getElementById(id).style.backgroundColor = "red";
+            var space = id[0].concat(id[1]);
             alert(id)
+            var aircraft; var battleship; var sub; var i;
+            var hit = false;
+            var hits; var misses;
+            var player_two_score = sessionStorage.getItem("player_two_score");
+            var player_one_score = sessionStorage.getItem("player_one_score");
+            var ship_health;
+            var sink = false;
+
+            if (turn == 1) {
+
+                aircraft = sessionStorage.getItem("aircraft_one").split(",");
+                battleship = sessionStorage.getItem("battle_one").split(",");
+                sub = sessionStorage.getItem("sub_one").split(",");
+
+                for (i = 0; i < aircraft.length; i++) {
+                    if (aircraft[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("aircraft_two_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their aircraft carrier!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("aircraft_two_health", ship_health);
+
+                    }
+                }
+
+                for (i = 0; i < battleship.length; i++) {
+                    if (battleship[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("battle_two_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their Battleship!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("battle_two_health", ship_health);
+                    }
+                }
+
+                for (i = 0; i < sub.length; i++) {
+                    if (sub[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("sub_two_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their Submarine!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("sub_two_health", ship_health);
+                    }
+                }
+
+                if (hit) {
+                    document.getElementById(id).style.backgroundColor = "red";
+                    player_two_score = player_two_score - 2;
+                    hits = sessionStorage.getItem("player_one_hits");
+
+                    hits.push(id);
+                    sessionStorage.setItem("player_one_hits", hits);
+
+                    if (!sink) {
+                        alert("It's a hit!");
+                    }
+
+                    
+                } else {
+                    document.getElementById(id).style.backgroundColor = "white";
+                    
+                    misses = sessionStorage.getItem("player_one_misses");
+
+                    misses.push(id);
+                    sessionStorage.setItem("player_one_misses", misses);
+
+                    alert("It's a miss!");
+                }
+
+                
+
+            } else {
+
+                aircraft = sessionStorage.getItem("aircraft_two").split(",");
+                battleship = sessionStorage.getItem("battle_two").split(",");
+                sub = sessionStorage.getItem("sub_two").split(",");
+
+                for (i = 0; i < aircraft.length; i++) {
+                    if (aircraft[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("aircraft_one_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their aircraft carrier!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("aircraft_one_health", ship_health);
+
+                    }
+                }
+
+                for (i = 0; i < battleship.length; i++) {
+                    if (battleship[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("battle_one_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their Battleship!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("battle_one_health", ship_health);
+                    }
+                }
+
+                for (i = 0; i < sub.length; i++) {
+                    if (sub[i] == space) {
+                        hit = true;
+                        ship_health = sessionStorage.getItem("sub_one_health");
+                        ship_health = ship_health - 1;
+
+                        if (ship_health == 0) {
+                            alert("It's a hit! You sunk their Submarine!");
+                            sink = true;
+                        }
+
+                        sessionStorage.setItem("sub_one_health", ship_health);
+                    }
+                }
+
+                if (hit) {
+                    document.getElementById(id).style.backgroundColor = "red";
+                    player_two_score = player_two_score - 2;
+                    hits = sessionStorage.getItem("player_two_hits");
+
+                    hits.push(id);
+                    sessionStorage.setItem("player_two_hits", hits);
+
+                    if (!sink) {
+                        alert("It's a hit!");
+                    }
+
+
+                } else {
+                    document.getElementById(id).style.backgroundColor = "white";
+
+                    misses = sessionStorage.getItem("player_two_misses");
+
+                    misses.push(id);
+                    sessionStorage.setItem("player_two_misses", misses);
+
+                    alert("It's a miss!");
+                }
+            }
+
             buttonPressed = true;
         }
 
