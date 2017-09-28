@@ -487,6 +487,7 @@
                     
                     document.getElementById(id).style.backgroundColor = "red";
                     player_two_score = player_two_score - 2;
+                    sessionStorage.setItem("player_two_score", player_two_score);
                     hits = sessionStorage.getItem("player_one_hits");
 
                     hits.push(id);
@@ -565,7 +566,8 @@
 
                 if (hit) {
                     document.getElementById(id).style.backgroundColor = "red";
-                    player_two_score = player_two_score - 2;
+                    player_one_score = player_one_score - 2;
+                    sessionStorage.setItem("player_one_score", player_one_score);
                     hits = sessionStorage.getItem("player_two_hits");
 
                     hits.push(id);
@@ -586,6 +588,10 @@
 
                     alert("It's a miss!");
                 }
+            }
+
+            if (player_two_score == 0 || player_one_score == 0) {
+                gameOver = true;
             }
 
           
@@ -658,10 +664,10 @@
                 document.getElementById(sub_space).innerHTML = "S";
             }
 
-            sessionStorage.setItem("player_one_score", "0");
+           
 
             wait();
-            buttonPressed = false;
+          
           
 
             
@@ -676,7 +682,7 @@
             var player_two_air = sessionStorage.getItem("aircraft_two").split(",");
             var player_two_battle = sessionStorage.getItem("battleship_two").split(",");
             var player_two_sub = sessionStorage.getItem("sub_two").split(",");
-
+            buttonPressed = false;
 
 
 
@@ -710,7 +716,7 @@
                 document.getElementById(sub_space).innerHTML = "S";
             }
 
-            sessionStorage.setItem("player_two_score", "0");
+       
             wait();
            
 
