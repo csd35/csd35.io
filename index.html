@@ -419,7 +419,7 @@
         function fire(id) {
 
             var space = id[0].concat(id[1]);
-            alert(id)
+            
             var aircraft; var battleship; var sub; var i;
             var hit = false;
             var hits = []; var misses = [];
@@ -451,7 +451,7 @@
                     }
                 }
 
-                alert("yeyo");
+              
 
                 for (i = 0; i < battleship.length; i++) {
                     if (battleship[i] == space) {
@@ -482,9 +482,9 @@
                         sessionStorage.setItem("sub_two_health", ship_health);
                     }
                 }
-                alert("l;fsakj");
+               
                 if (hit) {
-                    alert("hit");
+                    
                     document.getElementById(id).style.backgroundColor = "red";
                     player_two_score = player_two_score - 2;
                     hits = sessionStorage.getItem("player_one_hits");
@@ -506,7 +506,7 @@
                     sessionStorage.setItem("player_one_misses", misses);
 
                     alert("It's a miss!");
-                    alert("miss");
+                 
                 }
 
                 
@@ -588,7 +588,7 @@
                 }
             }
 
-            buttonPressed = true;
+          
         }
 
 
@@ -602,22 +602,22 @@
             
 
            
-            //while (!gameOver) {
-                playerOneTurn();
-                clearPlayerOneBoard();
-                playerTwoTurn();
-                clearPlayerTwoBoard();
-                player_one_score = sessionStorage.getItem("player_one_score");
-                player_two_score = sessionStorage.getItem("player_two_score");
-
-                if (Number(player_one_score) == 0 || Number(player_two_score) == 0) {
-                    gameOver = true;
+            while (!gameOver) {
+                if (!gameOver) {
+                    playerOneTurn();
                 }
-            //}
+                clearPlayerOneBoard();
+                if (!gameOver) {
+                    playerTwoTurn();
+                }
+                clearPlayerTwoBoard();
+                
+            }
         }
 
         function playerOneTurn() {
-            
+
+            buttonPressed = false;
             var name = sessionStorage.getItem("player_one");
             alert("Click OK to begin " + name + "'s turn");
 
@@ -712,8 +712,7 @@
 
             sessionStorage.setItem("player_two_score", "0");
             wait();
-            buttonPressed = false;
-            
+           
 
             
 
