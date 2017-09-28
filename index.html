@@ -821,10 +821,11 @@
         }
 
         function wait() {
+            alert(buttonPressed);
             if (!buttonPressed) {
               
                 setTimeout(wait(), 250000);
-                
+                alert("hey");
             }
             
         }
