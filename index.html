@@ -608,7 +608,15 @@
             }
 
             if (player_two_score == 0 || player_one_score == 0) {
-                gameOver = true;
+                gameOver();
+            } else {
+                if (turn == 1) {
+                    clearPlayerOneBoard();
+                    playerTwoTurn();
+                } else if (turn == 2) {
+                    clearPlayerTwoBoard();
+                    playerOneTurn();
+                }
             }
 
             
@@ -618,7 +626,7 @@
 
 
         function playGame() {
-            var gameOver = false;
+           
             var player_one_score = 24;
             var player_two_score = 24;
             sessionStorage.setItem("player_one_score", player_one_score);
@@ -626,19 +634,8 @@
 
             
 
-           
-            while (!gameOver) {
-                if (!gameOver) {
-                    playerOneTurn();
-                    
-                }
-                clearPlayerOneBoard();
-                if (!gameOver) {
-                    playerTwoTurn();
-                }
-                clearPlayerTwoBoard();
-                
-            }
+
+            playerOneTurn();
         }
 
         function playerOneTurn() {
@@ -684,12 +681,7 @@
                 document.getElementById(sub_space).innerHTML = "S";
             }
 
-            alert("yellow");
-            while (!buttonPressed) {
-
-            }
-            alert("blue");
-          
+            
 
             
         }
@@ -822,6 +814,26 @@
 
                 document.getElementById(sub_space).innerHTML = "";
             }
+        }
+
+        function gameOver(player) {
+
+            var winner; 
+            var score;
+            if (player = "one") {
+                winner = sessionStorage.getItem("player_one");
+                score = sessionStorage.getItem("player_one_score");
+            } else {
+                winner = sessionStorage.getItem("player_two");
+                score = sessionStorage.getItem("player_two_score");
+            }
+
+            var str = "The winner is ";
+            str.concat(winner);
+            str.concat(" with a final score of ");
+            str.concat(score);
+            alert(str);
+
         }
 
         
