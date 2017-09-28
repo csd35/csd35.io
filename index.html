@@ -685,7 +685,7 @@
             }
 
             alert("yell");
-            wait();
+            holdOnJustAMinute();
             alert("blue");
           
 
@@ -736,7 +736,7 @@
             }
 
        
-            wait();
+            holdOnJustAMinute();
            
 
             
@@ -822,11 +822,11 @@
             }
         }
 
-        function wait() {
+        function holdOnJustAMinute() {
             
             if (!buttonPressed) {
                 alert("jkl");
-                setTimeout(wait, 250000);
+                setTimeout(holdOnJustAMinute, 250000);
                 
                 
             }
