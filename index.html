@@ -488,7 +488,7 @@
                     document.getElementById(id).style.backgroundColor = "red";
                     player_two_score = player_two_score - 2;
                     sessionStorage.setItem("player_two_score", player_two_score);
-                    hits = sessionStorage.getItem("player_one_hits");
+                    hits = sessionStorage.getItem("player_one_hits").split(",");
 
                     if (hits.length == 0) {
                         hits = [id];
@@ -505,7 +505,7 @@
                 } else {
                     document.getElementById(id).style.backgroundColor = "white";
                     
-                    misses = sessionStorage.getItem("player_one_misses");
+                    misses = sessionStorage.getItem("player_one_misses").split(",");
 
                     if (misses.length == 0) {
                         misses = [id];
@@ -576,7 +576,7 @@
                     document.getElementById(id).style.backgroundColor = "red";
                     player_one_score = player_one_score - 2;
                     sessionStorage.setItem("player_one_score", player_one_score);
-                    hits = sessionStorage.getItem("player_two_hits");
+                    hits = sessionStorage.getItem("player_two_hits").split(",");
 
                     if (hits.length == 0) {
                         hits = [id];
@@ -593,7 +593,7 @@
                 } else {
                     document.getElementById(id).style.backgroundColor = "white";
 
-                    misses = sessionStorage.getItem("player_two_misses");
+                    misses = sessionStorage.getItem("player_two_misses").split(",");
 
                     if (misses.length == 0) {
                         misses = [id];
