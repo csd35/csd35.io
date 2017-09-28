@@ -490,7 +490,11 @@
                     sessionStorage.setItem("player_two_score", player_two_score);
                     hits = sessionStorage.getItem("player_one_hits");
 
-                    hits.push(id);
+                    if (hits.length == 0) {
+                        hits = [id];
+                    } else {
+                        hits.push(id);
+                    }
                     sessionStorage.setItem("player_one_hits", hits);
 
                     if (!sink) {
@@ -503,7 +507,11 @@
                     
                     misses = sessionStorage.getItem("player_one_misses");
 
-                    misses.push(id);
+                    if (misses.length == 0) {
+                        misses = [id];
+                    } else {
+                        misses.push(id);
+                    }
                     sessionStorage.setItem("player_one_misses", misses);
 
                     alert("It's a miss!");
@@ -570,7 +578,11 @@
                     sessionStorage.setItem("player_one_score", player_one_score);
                     hits = sessionStorage.getItem("player_two_hits");
 
-                    hits.push(id);
+                    if (hits.length == 0) {
+                        hits = [id];
+                    } else {
+                        hits.push(id);
+                    }
                     sessionStorage.setItem("player_two_hits", hits);
 
                     if (!sink) {
@@ -583,7 +595,11 @@
 
                     misses = sessionStorage.getItem("player_two_misses");
 
-                    misses.push(id);
+                    if (misses.length == 0) {
+                        misses = [id];
+                    } else {
+                        misses.push(id);
+                    }
                     sessionStorage.setItem("player_two_misses", misses);
 
                     alert("It's a miss!");
