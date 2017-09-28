@@ -684,7 +684,7 @@
                 document.getElementById(sub_space).innerHTML = "S";
             }
 
-            alert("yellow");
+            alert("yell");
             holdOnJustAMinute();
             alert("blue");
           
@@ -826,11 +826,15 @@
             
             if (!buttonPressed) {
                 alert("jkl");
-                setTimeout(holdOnJustAMinute(), 25000000000);
+                setTimeout(myFunc, 25000000000);
                 
                 
             }
             
+        }
+
+        function myFunc() {
+            alert("function");
         }
        
 
