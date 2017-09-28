@@ -68,7 +68,7 @@
         var airHealth = 5;
         var battlehealth = 4;
         var subHealth = 3;
-
+        var timer;
         sessionStorage.setItem("player_one_hits", player_one_hits);
         sessionStorage.setItem("player_one_misses", player_one_misses);
         sessionStorage.setItem("player_two_hits", player_two_hits);
@@ -81,6 +81,7 @@
         sessionStorage.setItem("sub_one_health", subHealth);
         sessionStorage.setItem("sub_two_health", subHealth);
         window.onload = start();
+
         
         playGame();
 
@@ -610,6 +611,7 @@
                 gameOver = true;
             }
 
+            clearTimeout(timer);
             
           
         }
@@ -821,11 +823,11 @@
         }
 
         function wait() {
-            alert(buttonPressed);
+            
             if (!buttonPressed) {
               
-                setTimeout(wait(), 250000);
-                alert("hey");
+                timer = setTimeout(wait(), 250000);
+                
             }
             
         }
