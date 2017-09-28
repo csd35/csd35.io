@@ -647,6 +647,17 @@
             var player_one_air = sessionStorage.getItem("aircraft_one").split(",");
             var player_one_battle = sessionStorage.getItem("battleship_one").split(",");
             var player_one_sub = sessionStorage.getItem("sub_one").split(",");
+            var hits = sessionStorage.getItem("player_one_hits").split(",");
+            var misses = sessionStorage.getItem("player_one_misses").split(",");
+
+            var i;
+            for (i = 0; i < hits.length; i++) {
+                document.getElementById(hits[i]).style.backgroundColor = "red";
+            }
+
+            for (i = 0; i < misses.length; i++) {
+                document.getElementById(misses[i]).style.backgroundColor = "white";
+            }
 
 
             turn = 1;
@@ -695,7 +706,18 @@
             var player_two_air = sessionStorage.getItem("aircraft_two").split(",");
             var player_two_battle = sessionStorage.getItem("battleship_two").split(",");
             var player_two_sub = sessionStorage.getItem("sub_two").split(",");
-            buttonPressed = false;
+
+            var hits = sessionStorage.getItem("player_two_hits").split(",");
+            var misses = sessionStorage.getItem("player_two_misses").split(",");
+
+            var i;
+            for (i = 0; i < hits.length; i++) {
+                document.getElementById(hits[i]).style.backgroundColor = "red";
+            }
+
+            for (i = 0; i < misses.length; i++) {
+                document.getElementById(misses[i]).style.backgroundColor = "white";
+            }
 
 
 
@@ -743,7 +765,17 @@
             var player_one_battle = sessionStorage.getItem("battleship_one").split(",");
             var player_one_sub = sessionStorage.getItem("sub_one").split(",");
 
+            var hits = sessionStorage.getItem("player_one_hits").split(",");
+            var misses = sessionStorage.getItem("player_one_misses").split(",");
 
+            var i;
+            for (i = 0; i < hits.length; i++) {
+                document.getElementById(hits[i]).style.backgroundColor = "lightblue";
+            }
+
+            for (i = 0; i < misses.length; i++) {
+                document.getElementById(misses[i]).style.backgroundColor = "lightblue";
+            }
 
 
             var air_space;
@@ -781,7 +813,17 @@
             var player_two_air = sessionStorage.getItem("aircraft_two").split(",");
             var player_two_battle = sessionStorage.getItem("battleship_two").split(",");
             var player_two_sub = sessionStorage.getItem("sub_two").split(",");
+            var hits = sessionStorage.getItem("player_two_hits").split(",");
+            var misses = sessionStorage.getItem("player_two_misses").split(",");
 
+            var i;
+            for (i = 0; i < hits.length; i++) {
+                document.getElementById(hits[i]).style.backgroundColor = "lightblue";
+            }
+
+            for (i = 0; i < misses.length; i++) {
+                document.getElementById(misses[i]).style.backgroundColor = "lightblue";
+            }
 
 
 
