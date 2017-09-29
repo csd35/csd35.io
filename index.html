@@ -431,7 +431,7 @@
             var ship_health;
             var sink = false;
             buttonPressed = true;
-            alert(turn);
+        
             if (turn == 1) {
                 
                 aircraft = sessionStorage.getItem("aircraft_two").split(",");
@@ -713,7 +713,7 @@
         }
 
         function playerTwoTurn() {
-            alert("yello");
+         
             turn = 2;
             var name_two = sessionStorage.getItem("player_two");
             alert("Click OK to begin " + name_two + "'s turn");
@@ -875,6 +875,7 @@
                 row = rows[j];
                 for (i = 0; row.length; i++) {
                     cell = row[i];
+                    alert(cell.id);
                     cell.style.backgroundColor = "lightblue";
                 }
 
