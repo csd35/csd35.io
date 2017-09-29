@@ -650,6 +650,7 @@
             var hits = sessionStorage.getItem("player_one_hits").split(",");
             var misses = sessionStorage.getItem("player_one_misses").split(",");
 
+            alert("hey");
             var i;
             for (i = 0; i < hits.length; i++) {
                 document.getElementById(hits[i]).style.backgroundColor = "red";
@@ -659,6 +660,7 @@
                 document.getElementById(misses[i]).style.backgroundColor = "white";
             }
 
+            alert("ho");
 
             turn = 1;
 
