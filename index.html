@@ -652,13 +652,13 @@
 
             alert("hey");
             var i;
-            if (hits.length > 0) {
+            if (hits.length != null) {
                 for (i = 0; i < hits.length; i++) {
                     document.getElementById(hits[i]).style.backgroundColor = "red";
                 }
             }
 
-            if (misses.length > 0) {
+            if (misses.length != null {
 
                 for (i = 0; i < misses.length; i++) {
                     document.getElementById(misses[i]).style.backgroundColor = "white";
