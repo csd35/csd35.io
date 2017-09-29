@@ -869,11 +869,12 @@
             var rows = document.getElementById("table_top").rows;
             alert("clear");
 
-            var j; var i; var row; var cell;
+            var j; var i;  var cell;
 
             for (j = 0; j < rows.length; j++) {
 
-                row = rows[j];
+                var row = rows[j];
+                
                 for (i = 0; row.length; i++) {
                     cell = row[i];
                     alert(cell.id);
