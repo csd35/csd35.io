@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("hest");
+            alert("hept");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -881,7 +881,7 @@
                 str = str.concat(letters[j]);
                 alert("yellow");
                 for (i = 0; i < 10; i++) {
-                    str = str.concat(numbers.length);
+                    str = str.concat(numbers[i]);
                     str = str.concat("a");
                     document.getElementById(str).style.backgroundColor = "lightblue";
                     alert(str);
