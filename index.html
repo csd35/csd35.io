@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("hess");
+            alert("hest");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -875,16 +875,16 @@
             var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
             var str = "";
-            
+            alert("blue");
             for (j = 0; j < 10; j++) {
 
                 str = str.concat(letters[j]);
-                
+                alert("yellow");
                 for (i = 0; i < 10; i++) {
                     str = str.concat(numbers.length);
                     str = str.concat("a");
                     document.getElementById(str).style.backgroundColor = "lightblue";
-                    console.log(str);
+                    alert(str);
                 }
 
                 str = "";
