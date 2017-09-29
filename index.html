@@ -429,6 +429,7 @@
             var ship_health;
             var sink = false;
             buttonPressed = true;
+            alert("yay");
             if (turn == 1) {
                 
                 aircraft = sessionStorage.getItem("aircraft_one").split(",");
@@ -607,6 +608,7 @@
                 }
             }
 
+            alert("yo");
             if (player_two_score == 0 || player_one_score == 0) {
                 gameOver();
             } else {
@@ -718,13 +720,17 @@
             var misses = sessionStorage.getItem("player_two_misses").split(",");
 
             var i;
-            for (i = 0; i < hits.length; i++) {
-                document.getElementById(hits[i]).style.backgroundColor = "red";
-            }
+            try {
+                for (i = 0; i < hits.length; i++) {
+                    document.getElementById(hits[i]).style.backgroundColor = "red";
+                }
+            }catch (err){}
 
-            for (i = 0; i < misses.length; i++) {
-                document.getElementById(misses[i]).style.backgroundColor = "white";
-            }
+            try {
+                for (i = 0; i < misses.length; i++) {
+                    document.getElementById(misses[i]).style.backgroundColor = "white";
+                }
+            }catch(err){}
 
 
 
