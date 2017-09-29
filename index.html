@@ -615,6 +615,7 @@
                 if (turn == 1) {
                     alert("badaboom");
                     clearPlayerOneBoard();
+                    alert("yeem");
                     playerTwoTurn();
                 } else if (turn == 2) {
                     clearPlayerTwoBoard();
@@ -654,7 +655,7 @@
             var hits = sessionStorage.getItem("player_one_hits").split(",");
             var misses = sessionStorage.getItem("player_one_misses").split(",");
 
-            alert("hey");
+            
             var i;
             try{
                 for (i = 0; i < hits.length; i++) {
@@ -669,7 +670,7 @@
                 }
             } catch(err){}
 
-            alert("ho");
+            
 
             turn = 1;
 
@@ -784,13 +785,19 @@
             var misses = sessionStorage.getItem("player_one_misses").split(",");
 
             var i;
-            for (i = 0; i < hits.length; i++) {
-                document.getElementById(hits[i]).style.backgroundColor = "lightblue";
-            }
 
-            for (i = 0; i < misses.length; i++) {
-                document.getElementById(misses[i]).style.backgroundColor = "lightblue";
-            }
+            try {
+                for (i = 0; i < hits.length; i++) {
+                    document.getElementById(hits[i]).style.backgroundColor = "lightblue";
+                }
+            }catch(err){}
+
+
+            try {
+                for (i = 0; i < misses.length; i++) {
+                    document.getElementById(misses[i]).style.backgroundColor = "lightblue";
+                }
+            }catch(err){}
 
 
             var air_space;
@@ -832,14 +839,17 @@
             var misses = sessionStorage.getItem("player_two_misses").split(",");
 
             var i;
-            for (i = 0; i < hits.length; i++) {
-                document.getElementById(hits[i]).style.backgroundColor = "lightblue";
-            }
+            try {
+                for (i = 0; i < hits.length; i++) {
+                    document.getElementById(hits[i]).style.backgroundColor = "lightblue";
+                }
+            } catch (err);
 
-            for (i = 0; i < misses.length; i++) {
-                document.getElementById(misses[i]).style.backgroundColor = "lightblue";
-            }
-
+            try {
+                for (i = 0; i < misses.length; i++) {
+                    document.getElementById(misses[i]).style.backgroundColor = "lightblue";
+                }
+            }catch(err){}
 
 
             var air_space;
