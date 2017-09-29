@@ -613,8 +613,12 @@
             }
 
      
-            if (player_two_score == 0 || player_one_score == 0) {
-                gameOver();
+            if (player_two_score == 0) {
+                gameOver("two");
+            } else if (player_one_score == 0) {
+
+                gameOver("one");
+
             } else {
                 if (turn == 1) {
               
