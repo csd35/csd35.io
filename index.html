@@ -617,10 +617,11 @@
                 if (turn == 1) {
               
                     clearPlayerOneBoard();
-                   
+                    clearUpperBoard();
                     playerTwoTurn();
                 } else if (turn == 2) {
                     clearPlayerTwoBoard();
+                    clearUpperBoard();
                     playerOneTurn();
                 }
             }
@@ -736,7 +737,7 @@
                     document.getElementById(misses[i]).style.backgroundColor = "white";
                 }
             }catch(err){}
-            alert("blu");
+         
 
 
             var air_space;
@@ -788,18 +789,7 @@
 
             var i;
 
-            try {
-                for (i = 0; i < hits.length; i++) {
-                    document.getElementById(hits[i]).style.backgroundColor = "lightblue";
-                }
-            }catch(err){}
-
-
-            try {
-                for (i = 0; i < misses.length; i++) {
-                    document.getElementById(misses[i]).style.backgroundColor = "lightblue";
-                }
-            }catch(err){}
+            
 
 
             var air_space;
@@ -841,17 +831,7 @@
             var misses = sessionStorage.getItem("player_two_misses").split(",");
 
             var i;
-            try {
-                for (i = 0; i < hits.length; i++) {
-                    document.getElementById(hits[i]).style.backgroundColor = "lightblue";
-                }
-            } catch (err) { }
-
-            try {
-                for (i = 0; i < misses.length; i++) {
-                    document.getElementById(misses[i]).style.backgroundColor = "lightblue";
-                }
-            }catch(err){}
+            
 
 
             var air_space;
@@ -882,6 +862,22 @@
                 sub_space = sub_space.concat("b");
 
                 document.getElementById(sub_space).innerHTML = "";
+            }
+        }
+
+        function clearUpperBoard() {
+            var rows = document.getElementById("table_top").rows;
+
+            var j; var i; var row; var cell;
+
+            for (j = 0; j < rows.length; j++) {
+
+                row = rows[j];
+                for (i = 0; row.length; i++) {
+                    cell = row[i];
+                    cell.style.backgroundColor = "lightblue";
+                }
+
             }
         }
 
