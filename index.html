@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("he");
+            alert("hess");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -879,12 +879,12 @@
             for (j = 0; j < 10; j++) {
 
                 str = str.concat(letters[j]);
-                alert("loop");
+                
                 for (i = 0; i < 10; i++) {
                     str = str.concat(numbers.length);
                     str = str.concat("a");
                     document.getElementById(str).style.backgroundColor = "lightblue";
-                    alert("77777");
+                    console.log(str);
                 }
 
                 str = "";
