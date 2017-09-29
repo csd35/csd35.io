@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("healls");
+            alert("hepps");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -668,7 +668,9 @@
                 for (i = 0; i < hits.length; i++) {
                     document.getElementById(hits[i]).style.backgroundColor = "red";
                 }
-            } catch(err){}
+            } catch (err) {
+                alert("woah");
+            }
 
             try{
 
