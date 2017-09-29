@@ -661,25 +661,23 @@
             var player_one_sub = sessionStorage.getItem("sub_one").split(",");
             var hits = sessionStorage.getItem("player_one_hits").split(",");
             var misses = sessionStorage.getItem("player_one_misses").split(",");
-
+            
             
             var i;
-            try{
+            try {
+                hits.shift();
+                
                 for (i = 0; i < hits.length; i++) {
-                    try {
+                    
                         document.getElementById(hits[i]).style.backgroundColor = "red";
-                    } catch (err) {
-                        for (i = 0; i < hits.length; i++) {
-                            alert(hits[i]);
-                        }
-                    }
+                    
                 }
             } catch (err) {
-                alert("woah");
+                
             }
 
             try{
-
+                misses.shift();
                 for (i = 0; i < misses.length; i++) {
                     document.getElementById(misses[i]).style.backgroundColor = "white";
                 }
@@ -739,12 +737,14 @@
 
             var i;
             try {
+                hits.shift();
                 for (i = 0; i < hits.length; i++) {
                     document.getElementById(hits[i]).style.backgroundColor = "red";
                 }
             }catch (err){}
 
             try {
+                misses.shift();
                 for (i = 0; i < misses.length; i++) {
                     document.getElementById(misses[i]).style.backgroundColor = "white";
                 }
