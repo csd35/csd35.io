@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("hello");
+            alert("hell");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -619,7 +619,9 @@
                 if (turn == 1) {
               
                     clearPlayerOneBoard();
+                    alert("hey");
                     clearUpperBoard();
+                    alert("yo");
                     playerTwoTurn();
                 } else if (turn == 2) {
                     clearPlayerTwoBoard();
@@ -873,15 +875,16 @@
             var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
             var str = "";
-
+            alert("blue");
             for (j = 0; j < letters.length; j++) {
 
                 str = str.concat(letters[j]);
-                
+                alert("y");
                 for (i = 0; numbers.length; i++) {
                     str = str.concat(numbers.length);
                     str = str.concat("a");
                     document.getElementById(str).style.backgroundColor = "lightblue";
+                    alert("lkj");
                 }
 
                 str = "";
