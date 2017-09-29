@@ -652,16 +652,18 @@
 
             alert("hey");
             var i;
-          
+            if (hits[0] != null) {
                 for (i = 0; i < hits.length; i++) {
                     document.getElementById(hits[i]).style.backgroundColor = "red";
                 }
-            
+            }
 
-                for (i = 0; i < misses.length; i++) {
-                    document.getElementById(misses[i]).style.backgroundColor = "white";
-                }
-            
+            if (misses[0] != null) { 
+
+            for (i = 0; i < misses.length; i++) {
+                document.getElementById(misses[i]).style.backgroundColor = "white";
+            }
+        }
 
             alert("ho");
 
