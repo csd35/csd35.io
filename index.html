@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("hip[o");
+            alert("hilllo");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -614,10 +614,10 @@
 
      
             if (player_two_score == 0) {
-                gameOver("two");
+                gameOver("one");
             } else if (player_one_score == 0) {
 
-                gameOver("one");
+                gameOver("two");
 
             } else {
                 if (turn == 1) {
@@ -921,11 +921,85 @@
             }
 
             var str = "The winner is ";
-            str.concat(winner);
-            str.concat(" with a final score of ");
-            str.concat(score);
+            str = str.concat(winner);
+            str = str.concat(" with a final score of ");
+            str = str.concat(score);
             alert(str);
 
+            highScore(score, winner);
+        }
+
+        function highScore(score, player) {
+
+            try {
+                var scores = localStorage.getItem("high_scores").split(",");
+                var names = localStorage.getItem("high_score_names").split(",");
+                var high_scorers = Number(localStorage.getItem("high_scorers"));
+                
+
+                var stop = false;
+                var position;
+                if (high_scorers == 10) {
+                    var count = 0;
+                    for (var i = 0; i < 10; i++) {
+                        if (!stop && Number(scores[i]) <= Number(score)) {
+                            position = i;
+                            stop = true;
+                        }
+                        if (Number(scores[i]) == Number(score) && Number(score) == 24) {
+                            count++;
+                        }
+                    }
+
+                    
+
+
+                    if (stop && count < 10) {
+
+                        for (i = high_scorers; i > position; i--) {
+                            scores[i] = scores[i - 1];
+                            names[i] = names[i - 1];
+                        }
+                        names[position] = player;
+                        scores[position] = score;
+
+                        localStorage.setItem("high_scores", scores);
+                        localStorage.setItem("high_scorers", high_scorers);
+                        localStorage.setItem("high_score_names", names);
+                    } 
+                } else {
+
+                    for (var i = 0; i < high_scorers; i++) {
+                        if (!stop && Number(scores[i]) <= Number(score)) {
+                            position = i;
+                            stop = true;
+                        }
+                    }
+
+                    high_scorers++;
+
+                    for (i = high_scorers; i > position; i--) {
+                        scores[i] = scores[i - 1];
+                        names[i] = names[i - 1];
+                    }
+                    names[position] = player;
+                    scores[position] = score;
+
+                    localStorage.setItem("high_scores", scores);
+                    localStorage.setItem("high_scorers", high_scorers);
+                    localStorage.setItem("high_score_names", names);
+
+                }
+
+            } catch (err) {
+                var scores = new Array(10);
+                var names = new Array(10);
+                scores[0] = score;
+                names[0] = player;
+                localStorage.setItem("high_scores", scores);
+                localStorage.setItem("high_score_names", names);
+                localStorage.setItem("high_scorers", 1);
+            }
         }
 
         
