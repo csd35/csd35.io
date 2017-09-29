@@ -434,9 +434,9 @@
             alert(turn);
             if (turn == 1) {
                 
-                aircraft = sessionStorage.getItem("aircraft_one").split(",");
-                battleship = sessionStorage.getItem("battleship_one").split(",");
-                sub = sessionStorage.getItem("sub_one").split(",");
+                aircraft = sessionStorage.getItem("aircraft_two").split(",");
+                battleship = sessionStorage.getItem("battleship_two").split(",");
+                sub = sessionStorage.getItem("sub_two").split(",");
                 
 
                 for (i = 0; i < aircraft.length; i++) {
@@ -526,9 +526,9 @@
 
             } else {
 
-                aircraft = sessionStorage.getItem("aircraft_two").split(",");
-                battleship = sessionStorage.getItem("battleship_two").split(",");
-                sub = sessionStorage.getItem("sub_two").split(",");
+                aircraft = sessionStorage.getItem("aircraft_one").split(",");
+                battleship = sessionStorage.getItem("battleship_one").split(",");
+                sub = sessionStorage.getItem("sub_one").split(",");
 
                 for (i = 0; i < aircraft.length; i++) {
                     if (aircraft[i] == space) {
@@ -610,14 +610,14 @@
                 }
             }
 
-            alert("yort");
+     
             if (player_two_score == 0 || player_one_score == 0) {
                 gameOver();
             } else {
                 if (turn == 1) {
-                    alert("badaboom");
+              
                     clearPlayerOneBoard();
-                    alert("yeem");
+                   
                     playerTwoTurn();
                 } else if (turn == 2) {
                     clearPlayerTwoBoard();
