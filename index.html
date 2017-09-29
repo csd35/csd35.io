@@ -180,7 +180,7 @@
                 }
 
                 var end; var beginning; var spaces = []; var nextSpace; var num; var i; 
-                var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+                var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
               
 
@@ -866,20 +866,23 @@
         }
 
         function clearUpperBoard() {
-            var rows = document.getElementById("table_top").rows;
-            alert("cleared");
 
-            var j; var i;  var cell;
+            var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+            var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
-            for (j = 0; j < rows.length; j++) {
+            var str = "";
 
-                var row = rows[j];
+            for (j = 0; j < letters.length; j++) {
+
+                str = str.concat(letters[j]);
                 
-                for (i = 0; row.length; i++) {
-                    cell = row[i];
-                    alert(cell.id);
-                    cell.style.backgroundColor = "lightblue";
+                for (i = 0; numbers.length; i++) {
+                    str = str.concat(numbers.length);
+                    str = str.concat("a");
+                    document.getElementById(str).style.backgroundColor = "lightblue";
                 }
+
+                str = "";
 
             }
         }
