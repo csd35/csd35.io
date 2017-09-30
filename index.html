@@ -89,7 +89,7 @@
 
         function start() {
 
-            alert("hilllo");
+            alert(";afsdj");
             if (typeof (Storage) !== "undefined") {
                 var response = prompt("What is your name?");
 
@@ -614,10 +614,10 @@
 
      
             if (player_two_score == 0) {
-                gameOver("one");
+                gameOver(1);
             } else if (player_one_score == 0) {
 
-                gameOver("two");
+                gameOver(2);
 
             } else {
                 if (turn == 1) {
@@ -912,10 +912,10 @@
 
             var winner; 
             var score;
-            if (player = "one") {
+            if (player == 1) {
                 winner = sessionStorage.getItem("player_one");
                 score = sessionStorage.getItem("player_one_score");
-            } else {
+            } else if (player ==2) {
                 winner = sessionStorage.getItem("player_two");
                 score = sessionStorage.getItem("player_two_score");
             }
