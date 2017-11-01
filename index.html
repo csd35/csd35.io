@@ -165,9 +165,19 @@
                 ship_three = ships[2].split("");
 
                 var i;
-                alert("blue");
+                alert("red");
 
-                
+                if (ship_one[0] == " ") {
+                    ship.shift();
+                }
+
+                if (ship_two[0] == " ") {
+                    ship_two.shift();
+                }
+
+                if (ship_three[0] == " ") {
+                    ship_three.shift();
+                }
 
                
 
