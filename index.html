@@ -189,10 +189,7 @@
                 var end; var beginning; var spaces = []; var nextSpace; var num; var i; 
                 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
-                alert(battleship_one);
-                alert(battleship_two);
-                
-              
+                           
 
                 
                 if (aircraft_one[2] == aircraft_one[5]) {
@@ -369,6 +366,9 @@
                     }
 
                 } else {
+
+                    alert(right);
+
                     i = 0;
                     while (battleship_one[2] != letters[i]) {
                         i++;
@@ -377,6 +377,8 @@
                     for (j = i; j < i + 4; j++) {
                         spaces.push(letters[j].concat(battleship_one[3]));
                     }
+
+                    alert(spaces);
                     sessionStorage.setItem("battleship_one", spaces);
 
                     for (i = 0; i < 4; i++) {
