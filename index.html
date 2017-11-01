@@ -165,7 +165,7 @@
                 ship_three = ships[2].split("");
 
                 var i;
-                alert("red");
+              
 
                 if (ship_one[0] == " ") {
                     ship.shift();
@@ -294,12 +294,9 @@
                     }
                 }
 
-                alert("subs");
-                alert(sub_one);
-                alert(sub_one[2]);
-                alert(sub_one[5]);
+             
                 if (sub_one[2] == sub_one[5]) {
-                    alert("wrong");
+                   
                     end = sub_one[6];
                     beginning = sub_one[3];
                     spaces.push(sub_one[2].concat(beginning));
@@ -320,7 +317,7 @@
 
 
                 } else {
-                    alert("right");
+                
                     i = 0;
                     while (sub_one[2] != letters[i]) {
                         i++;
@@ -361,7 +358,6 @@
                     }
 
                 } else {
-                    alert("right_two");
                     i = 0;
                     while (sub_two[2] != letters[i]) {
                         i++;
@@ -377,7 +373,7 @@
                     }
                 }
 
-                alert("here");
+          
 
                 if (battleship_one[2] == battleship_one[5]) {
                
@@ -413,7 +409,7 @@
                         spaces.push(letters[j].concat(battleship_one[3]));
                     }
 
-                    alert(spaces);
+                  
                     sessionStorage.setItem("battleship_one", spaces);
 
                     for (i = 0; i < 4; i++) {
@@ -458,7 +454,6 @@
                     }
                 }
 
-                alert("gone");
                
                
              }
