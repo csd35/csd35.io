@@ -109,6 +109,18 @@
                 var ship_two = ships[1].split("");
                 var ship_three = ships[2].split("");
 
+                if (ship_one[0] == " ") {
+                    ship.shift();
+                }
+
+                if (ship_two[0] == " ") {
+                    ship_two.shift();
+                }
+
+                if (ship_three[0] == " ") {
+                    ship_three.shift();
+                }
+
                 var aircraft_one; var battleship_one; var sub_one;
 
                 switch (ship_one[0]) {
@@ -153,19 +165,9 @@
                 ship_three = ships[2].split("");
 
                 var i;
-                alert("yert");
+                alert("blue");
 
-                if (ship_one[0] == " ") {
-                    ship.shift();
-                }
-
-                if (ship_two[0] == " ") {
-                    ship_two.shift();
-                }
-
-                if (ship_three[0] == " ") {
-                    ship_three.shift();
-                }
+                
 
                
 
